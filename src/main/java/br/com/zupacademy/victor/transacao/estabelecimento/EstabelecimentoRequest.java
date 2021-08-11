@@ -1,4 +1,4 @@
-package br.com.zupacademy.victor.transacao.evento;
+package br.com.zupacademy.victor.transacao.estabelecimento;
 
 public class EstabelecimentoRequest {
 

@@ -1,4 +1,4 @@
-package br.com.zupacademy.victor.transacao.evento;
+package br.com.zupacademy.victor.transacao.cartao;
 
 public class CartaoRequest {
 

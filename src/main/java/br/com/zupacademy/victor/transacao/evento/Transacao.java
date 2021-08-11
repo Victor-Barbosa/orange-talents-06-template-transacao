@@ -1,5 +1,8 @@
 package br.com.zupacademy.victor.transacao.evento;
 
+import br.com.zupacademy.victor.transacao.cartao.Cartao;
+import br.com.zupacademy.victor.transacao.estabelecimento.Estabelecimento;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -8,25 +11,22 @@ import java.time.LocalDateTime;
 public class Transacao {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idTransacao;
-    @Column(nullable = false)
     private String id;
     @Column(nullable = false)
     private BigDecimal valor;
     @OneToOne(cascade = CascadeType.ALL)
-    private Estabelecimento toModel;
+    private Estabelecimento estabelecimento;
     @OneToOne(cascade = CascadeType.ALL)
-    private Cartao toModel1;
+    private Cartao cartao;
     @Column(nullable = false)
     private LocalDateTime efetivadaEm;
 
-    public Transacao(String id, BigDecimal valor, Estabelecimento toModel, Cartao toModel1, LocalDateTime efetivadaEm) {
+    public Transacao(String id, BigDecimal valor, Estabelecimento estabelecimento, Cartao cartao, LocalDateTime efetivadaEm) {
 
         this.id = id;
         this.valor = valor;
-        this.toModel = toModel;
-        this.toModel1 = toModel1;
+        this.estabelecimento = estabelecimento;
+        this.cartao = cartao;
         this.efetivadaEm = efetivadaEm;
     }
 
@@ -38,12 +38,12 @@ public class Transacao {
         return valor;
     }
 
-    public Estabelecimento getToModel() {
-        return toModel;
+    public Estabelecimento getEstabelecimento() {
+        return estabelecimento;
     }
 
-    public Cartao getToModel1() {
-        return toModel1;
+    public Cartao getCartao() {
+        return cartao;
     }
 
     public LocalDateTime getEfetivadaEm() {

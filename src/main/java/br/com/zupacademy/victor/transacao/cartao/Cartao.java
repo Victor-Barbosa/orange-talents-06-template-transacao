@@ -1,4 +1,4 @@
-package br.com.zupacademy.victor.transacao.evento;
+package br.com.zupacademy.victor.transacao.cartao;
 
 import javax.persistence.*;
 
@@ -6,9 +6,6 @@ import javax.persistence.*;
 public class Cartao {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idCartao;
-    @Column(nullable = false)
     private String id;
     @Column(nullable = false)
     private String email;

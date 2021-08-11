@@ -1,5 +1,8 @@
 package br.com.zupacademy.victor.transacao.evento;
 
+import br.com.zupacademy.victor.transacao.cartao.CartaoRequest;
+import br.com.zupacademy.victor.transacao.estabelecimento.EstabelecimentoRequest;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
